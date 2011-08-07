@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide: 23 - Rule #2
-	Script: 
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide: 24 - Rule #2
+	Script: Implements DBHealth.UniqueIndexOnNullableColumn exception report
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO

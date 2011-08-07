@@ -1,6 +1,0 @@
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\sql\debug\DatabaseScripts_Database.sqlsettings
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\sql\debug\DatabaseScripts_Database.sqldeployment
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\sql\debug\DatabaseScripts_Database.sqlcmdvars
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\sql\debug\DatabaseScripts.deploymanifest
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\sql\debug\DatabaseScripts.dbschema
-c:\users\cade\documents\visual studio 2010\Projects\LeversAndTurtles\DatabaseScripts\obj\Debug\DatabaseScripts.dbschema

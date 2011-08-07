@@ -1,4 +1,13 @@
 /*
+	Presentation: Get a Lever and Pick Any Turtle
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide 29:
+	Script: Creates a view of all the lookup definitions based on the metadata
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
+*/
+/*
 	SELECT {COLUMN_LIST}
 	FROM {SCHEMA_NAME}.{TABLE_NAME}
 	ORDER BY {SORT_COLUMN}

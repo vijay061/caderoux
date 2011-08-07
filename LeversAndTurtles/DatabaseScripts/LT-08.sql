@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide: 25 - What about exclusions?
-	Script: 
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide: 26 - What about exclusions?
+	Script: Implements modified DBHealth.SmallVarcharColumns exception report with exclusions
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO
@@ -21,7 +25,7 @@ BEGIN
 		ON cp.FullObjectName = QUOTENAME(c.TABLE_SCHEMA) + '.' + QUOTENAME(c.TABLE_NAME) + '.' + QUOTENAME(c.COLUMN_NAME)
 		AND cp.PropertyName = 'DBHealth.SmallVarcharColumns'
 	WHERE c.DATA_TYPE IN ('varchar', 'nvarchar')
-		AND c.CHARACTER_MAXIMUM_LENGTH <= 2
+		AND c.CHARACTER_MAXIMUM_LENGTH IN (1, 2)
 		AND ISNULL(cp.PropertyValue, '') <> 'EXCLUDE'
 END
 GO

@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide: 19
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide: 20
 	Script: Creates Demo tables and indexes
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO

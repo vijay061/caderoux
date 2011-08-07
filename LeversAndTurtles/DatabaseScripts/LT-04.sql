@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide: 21 - Rule #0
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide: 22 - Rule #0
 	Script: Make a DBHealth.MonitoredSchemas view
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO

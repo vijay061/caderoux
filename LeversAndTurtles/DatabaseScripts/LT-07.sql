@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide: 24 - Rule #3
-	Script: 
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide: 25 - Rule #3
+	Script: Implements DBHealth.SmallVarcharColumns exception report
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO
@@ -18,7 +22,7 @@ BEGIN
 	INNER JOIN DBHealth.MonitoredSchemas AS ms
 		ON ms.SchemaName = c.TABLE_SCHEMA
 	WHERE c.DATA_TYPE IN ('varchar', 'nvarchar')
-		AND c.CHARACTER_MAXIMUM_LENGTH <= 2
+		AND c.CHARACTER_MAXIMUM_LENGTH IN (1, 2)
 END
 GO
 

@@ -1,7 +1,11 @@
 /*
 	Presentation: Get a Lever and Pick Any Turtle
-	Slide 26: Now we have a bunch of rules
-	Script: 
+	Ref: https://bitly.com/bundles/caderoux/3
+	Slide 27: Now we have a bunch of rules
+	Script: Implements DBHealth.RunChecks to run all checks in a particular set
+	By: Cade Roux cade@rosecrescent.com
+	This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	http://creativecommons.org/licenses/by-sa/3.0/
 */
 USE LeversAndTurtles
 GO
