@@ -1,0 +1,9 @@
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\HealthMonitorWinForms.Properties.Resources.resources
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\bin\Debug\HealthMonitorWinForms.exe
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\bin\Debug\HealthMonitorWinForms.pdb
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\HealthMonitorWinForms.exe
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\HealthMonitorWinForms.pdb
+C:\Users\Cade\documents\visual studio 2010\Projects\LeversAndTurtles\HealthMonitorWinForms\obj\x86\Debug\HealthMonitorWinForms.HealthMonitorForm.resources

@@ -1,0 +1,34 @@
+<#@ template language="C#" hostspecific="True" debug="True" #>
+<#@ output extension="sql" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Security.Principal" #>
+<#
+	// http://www.olegsych.com/2008/09/t4-tutorial-creatating-your-first-code-generator/
+#>
+<#
+	SqlConnection cn = new SqlConnection("Data Source=(local);Initial Catalog=LeversAndTurtles;Trusted_Connection=True");
+	cn.Open();
+	SqlCommand cm = new SqlCommand("SELECT * FROM Demo.LookupDefinitions", cn);
+	cm.CommandType = System.Data.CommandType.Text;
+	SqlDataReader dr = cm.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+	while (dr.Read()) {
+	#>
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[<#= dr["SCHEMA_NAME"] #>].[Lookup_<#= dr["TABLE_NAME"] #>]') AND type in (N'P', N'PC'))
+	DROP PROCEDURE [<#= dr["SCHEMA_NAME"] #>].[Lookup_<#= dr["TABLE_NAME"] #>]
+GO
+
+-- Code Generated on <#= DateTime.Now #> by <#= WindowsIdentity.GetCurrent().Name #>
+CREATE PROCEDURE [<#= dr["SCHEMA_NAME"] #>].[Lookup_<#= dr["TABLE_NAME"] #>]
+AS
+BEGIN
+	SELECT <#= dr["COLUMN_LIST"] #>
+	FROM [<#= dr["SCHEMA_NAME"] #>].[<#= dr["TABLE_NAME"] #>]
+	ORDER BY <#= dr["SORT_COLUMN"] #>
+END
+GO
+	<#
+	}
+	dr.Close();
+#>

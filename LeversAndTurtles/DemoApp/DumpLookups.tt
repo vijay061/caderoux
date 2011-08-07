@@ -1,0 +1,61 @@
+<#@ template language="C#" hostspecific="True" debug="True" #>
+<#@ output extension="cs" #>
+<#@ include file="T4Toolbox.tt" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.SqlClient;
+
+// Comment this!
+public class DumpLookups {
+	public static void DumpAll() {
+<#
+	{
+	SqlConnection cn = new SqlConnection("Data Source=(local);Initial Catalog=LeversAndTurtles;Trusted_Connection=True;Asynchronous Processing=True");
+	cn.Open();
+	SqlCommand cm = new SqlCommand("SELECT * FROM Demo.LookupDefinitions", cn);
+	cm.CommandType = System.Data.CommandType.Text;
+	SqlDataReader dr = cm.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+	while (dr.Read()) {
+#>
+		DumpLookup_<#= dr["TABLE_NAME"] #>();
+<#
+	}
+	dr.Close();
+	}
+#>
+	}
+
+<#
+	{
+	SqlConnection cn = new SqlConnection("Data Source=(local);Initial Catalog=LeversAndTurtles;Trusted_Connection=True;Asynchronous Processing=True");
+	cn.Open();
+	SqlCommand cm = new SqlCommand("SELECT * FROM Demo.LookupDefinitions", cn);
+	cm.CommandType = System.Data.CommandType.Text;
+	SqlDataReader dr = cm.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+	while (dr.Read()) {
+#>
+	public static void DumpLookup_<#= dr["TABLE_NAME"] #>() {
+		SqlConnection cn = new SqlConnection("Data Source=(local);Initial Catalog=LeversAndTurtles;Trusted_Connection=True");
+		cn.Open();
+		SqlCommand cm = new SqlCommand("[<#= dr["SCHEMA_NAME"] #>].[Lookup_<#= dr["TABLE_NAME"] #>]", cn);
+		cm.CommandType = System.Data.CommandType.StoredProcedure;
+		SqlDataReader dr = cm.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+		Console.WriteLine("{0} Table Contents", "Lookup_<#= dr["TABLE_NAME"] #>");
+		while (dr.Read()) {
+			for (int lp = 0 ; lp < dr.FieldCount ; lp++) {
+				Console.WriteLine("{0}: {1}", dr.GetName(lp), dr[lp].ToString());
+			}
+		}
+		dr.Close();	
+	}
+
+<#
+	}
+	dr.Close();
+	}
+#>
+}
